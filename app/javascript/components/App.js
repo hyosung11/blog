@@ -9,7 +9,7 @@ import React from 'react'
 class App extends React.Component {
   render () {
     return (
-      <h1> Blog </h1>
+      <h1> Training Inspiration </h1>
     )
   }
 }
