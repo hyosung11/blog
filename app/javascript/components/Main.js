@@ -28,5 +28,7 @@ class Main extends React.Component {
     })
   }
   // Create a new Post
-  
+
 }
+
+export default Main 
