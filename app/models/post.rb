@@ -8,8 +8,24 @@ attr_reader :idea
   # connect to postgres
   DB = PG.connect({:host => "localhost", :port => 5432, :dbname => 'trainingblog_development'})
 
-  # ROUTES
-
+# ===================
+#  Prepared Statements
+# ===================
+DB.prepare("create_post",
+  <<-SQL
+    INSERT INTO blogs (name, image, body)
+    VALUES ($1, $2, $3)
+    RETURNING id, name, image, body;
+  SQL
+)
+DB.prepare("update_post",
+  <<-SQL
+    UPDATE blogs
+    SET name = $2, image = $3, body = $4
+    WHERE id = $1
+    RETURNING id, name, image, body;
+  SQL
+)
   # index
   def self.all
     results = DB.exec("SELECT * FROM blogs ORDER BY id ASC;")
@@ -45,13 +61,7 @@ attr_reader :idea
 
   # create
   def self.create(opts)
-    results = DB.exec(
-      <<-SQL
-        INSERT INTO blogs (name, image, body)
-        VALUES ('#{opts["name"]}', '#{opts["image"]}', '#{opts["body"]}')
-        RETURNING id, name, image, body;
-      SQL
-    )
+    results = DB.exec_prepared("create_post", [opts["name"], opts["image"], opts["body"]])
     return {
       "id" => results.first["id"].to_i,
       "name" => results.first["name"],
@@ -68,17 +78,7 @@ attr_reader :idea
 
   # update
   def self.update(id, opts)
-    results = DB.exec(
-      <<-SQL
-        UPDATE blogs
-        SET
-          name = '#{opts["name"]}',
-          image = '#{opts["image"]}',
-          body = '#{opts["body"]}'
-        WHERE id = #{id}
-        RETURNING id, name, image, body;
-      SQL
-    )
+    results = DB.exec_prepared("update_post", [id, opts["name"], opts["image"], opts["body"]])
     return {
       "id" => results.first["id"].to_i,
       "name" => results.first["name"],
