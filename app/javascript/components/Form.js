@@ -46,6 +46,17 @@ class Form extends React.Component {
     })
   }
 
+  componentDidUpdate(prevProps) {
+    if(this.props.formInputs.name !== prevProps.formInputs.name) {
+      this.setState({
+        name: this.props.formInputs.name,
+        image: this.props.formInputs.image,
+        body: this.props.formInputs.body,
+        id: this.props.formInputs.id
+      })
+    }
+  }
+
   // RENDER
   render () {
     return (
@@ -62,15 +73,14 @@ class Form extends React.Component {
         </label>
         <label>
           post
-          <input type="text" placeholder="share your inspiration" id="body"
-            value={this.state.body} onChange={this.handleChange}/></textarea>
+          <textarea placeholder="share your inspiration" id="body"
+            value={this.state.body} onChange={this.handleChange}></textarea>
         </label>
         <input type="submit" value="inspire"/>
       </form>
     )
   }
 }
-
 
 // export
 export default Form

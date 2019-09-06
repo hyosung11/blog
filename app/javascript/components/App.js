@@ -17,6 +17,12 @@ class App extends React.Component {
       view: {
         page: 'home',
         pageTitle: 'lorem ipsum ...'
+      },
+      formInputs: {
+        name: null,
+        image: null,
+        body: null,
+        id: null
       }
     }
   }
@@ -25,6 +31,12 @@ class App extends React.Component {
   handleView = (view) => {
     // declare an empty variable
     let pageTitle = ''
+    let formInputs = {
+      name: '',
+      image: '',
+      body: '',
+      id: null
+    }
     // decide the pageTitle based on the view
     switch (view) {
       case 'home':
@@ -35,6 +47,12 @@ class App extends React.Component {
         break
       case 'editPost':
         pageTitle = 'lorem ipsum'
+        formInputs = {
+          name: postData.name,
+          image: postData.image,
+          body: postData.body,
+          id: postData.id
+        }
         break
       default:
         break
@@ -44,7 +62,8 @@ class App extends React.Component {
       view: {
         page: view,
         pageTitle: pageTitle
-      }
+      },
+      formInputs: formInputs
     })
   }
 
@@ -58,6 +77,7 @@ class App extends React.Component {
           <Main
             view={this.state.view}
             handleView={this.handleView}
+            formInputs={this.state.formInputs}
           />
         </div>
       </div>
