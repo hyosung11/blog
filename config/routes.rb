@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # root route
   root 'site#index'
 
-  # Posts routes
+  # posts routes
   get 'api/posts', to: 'posts#index'
   get 'api/posts/:id', to: 'posts#show'
   post 'api/posts', to: 'posts#create'

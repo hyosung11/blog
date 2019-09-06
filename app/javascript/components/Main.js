@@ -1,9 +1,14 @@
 // =============
 //  Dependencies
 // =============
+
+// packages
 import React from 'react'
+
+// components
 import Post from './Post.js'
 import Form from './Form.js'
+
 // =============
 //  Components
 // =============
@@ -29,6 +34,26 @@ class Main extends React.Component {
   }
   // Create a new Post
 
+  // Life Cycles
+  componentDidMount() {
+    this.fetchPosts()
+  }
+
+  // RENDER
+  render () {
+    return (
+      <main>
+        {this.state.posts.map((postData) => {
+          <Post
+            key={postData.id}
+            postData={postData}
+            handleView={this.props.handleView}
+          />
+        })}
+      </main>
+    )
+  }
+
 }
 
-export default Main 
+export default Main
