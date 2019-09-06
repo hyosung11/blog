@@ -28,7 +28,7 @@ class App extends React.Component {
   }
 
   // HANDLERS
-  handleView = (view) => {
+  handleView = (view, postData) => {
     // declare an empty variable
     let pageTitle = ''
     let formInputs = {
