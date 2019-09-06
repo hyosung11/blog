@@ -43,17 +43,18 @@ class Main extends React.Component {
   render () {
     return (
       <main>
-        {this.state.posts.map((postData) => {
-          <Post
-            key={postData.id}
-            postData={postData}
-            handleView={this.props.handleView}
-          />
-        })}
+        <h1>{this.props.view.pageTitle}</h1>
+          {this.state.posts.map((postData) => (
+            <Post
+              key={postData.id}
+              postData={postData}
+              handleView={this.props.handleView}
+            />
+        ))}
       </main>
     )
   }
-
 }
 
+// Export
 export default Main
