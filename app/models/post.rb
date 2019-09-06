@@ -26,12 +26,12 @@ class Post
         "body" => results.first["body"]
       }
     else
-      return{
+      return {
         "error" => "posts does not exist"
-      }, status 400
+      }, status: 400
     end
   end
-  def slef.create(opts)
+  def self.create(opts)
     results = DB.exec(
       <<-SQL
         INSERT INTO blogs (name, image, body)

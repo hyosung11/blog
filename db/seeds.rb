@@ -13,7 +13,7 @@ Post.create({
 })
 
 Post.create({
-  "name" => "Tia-Clair Toomey: CrossFit's 'Fittest Woman on Earth'",
+  "name" => "Tia-Clair Toomey: CrossFit\s Fittest Woman on Earth",
   "image" => "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/methode/2019/03/22/4dc10586-4b93-11e9-8e02-95b31fc3f54a_image_hires_112108.jpg?itok=UwXPQVwn&v=1553224872",
   "body" => "What I believe is that experience trumps confidence. The more I competed and gained experience, the more confident I became and the more I understood my abilities."
 })
