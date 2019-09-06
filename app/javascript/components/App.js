@@ -6,7 +6,7 @@ import React from 'react'
 // components
 import Header from './Header.js'
 import Aside from './Aside.js'
-import Main from '/.Main.js'
+import Main from './Main.js'
 
 // COMPONENT CLASS
 class App extends React.Component {
