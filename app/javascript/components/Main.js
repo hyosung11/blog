@@ -100,13 +100,18 @@ class Main extends React.Component {
     return (
       <main>
         <h1>{this.props.view.pageTitle}</h1>
-          {this.state.posts.map((postData) => (
+        {this.props.view.page === 'home'
+        ? this.state.posts.map((postData) => (
             <Post
               key={postData.id}
               postData={postData}
               handleView={this.props.handleView}
-            />
-        ))}
+              handleDelete={this.handleDelete}/>
+          ))
+          : <Form
+              handleCreate={this.handleCreate}
+              formInputs={this.formInputs}/>
+        }
       </main>
     )
   }
