@@ -16,19 +16,21 @@
  /* =============== */
  /*     FONTS       */
  /* =============== */
- @import url("https://fonts.googleapis.com/css?family=Yatra+One&display=swap");
- @import url("https://fonts.googleapis.com/css?family=Stint+Ultra+Expanded|Yatra+One&display=swap")
+ @import url("https://fonts.googleapis.com/css?family=Yatra+One|Stint+Ultra+expanded|Strait|&display=swap");
+
 
  :root{
    --main-font: 'Yatra One';
-   --header-font: 
+   --header-font: 'Stint Ultra Expanded';
+   --button-font: 'Strait';
  }
  /* =============== */
  /*     MAIN       */
  /* =============== */
  body{
    font-family: var(--main-font);
-   background: whitesmoke;
+   background: black;
+   color: white;
  }
 .main-container{
   display: flex;
@@ -42,8 +44,63 @@ aside{
   box-sizing: border-box;
   background: #040402;
   color: #9A9F98;
-  text-shadow: 2px 2px 2px red;
+  text-shadow: 2px 2px 2px black;
+  text-transform: uppercase;
 }
 aside h1{
+  font-family: var(--header-font);
+}
+aside ul{
+  list-style-type: none;
+  padding: 0;
+}
+aside li{
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: var(--header-font);
+  background:#87343F;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+/* =============== */
+/*     HEADER      */
+/* =============== */
+header h1{
+  text-align: center;
+}
+/* =============== */
+/*     POSTS       */
+/* =============== */
+article{
+  text-align: center;
+}
+.post-header img{
+  width: 250px;
+  height: 150px;
+  padding: 2px;
+  border:  1px solid #ddd;
+}
+.post-options ul{
+  list-style-type: none;
+  padding: 12px 0px;
+  font-family: var(--button-font);
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+
+}
+.post-options li{
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 5px;
+  background: #87343F;
+  color: #9A9F98;
+  text-shadow: 2px 2px 2px black;
+  margin: 20px 10px;
+  border: 5px;
 
 }
