@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+ /* =============== */
+ /*     FONTS       */
+ /* =============== */
+ @import url("https://fonts.googleapis.com/css?family=Yatra+One&display=swap");
+ @import url("https://fonts.googleapis.com/css?family=Stint+Ultra+Expanded|Yatra+One&display=swap")
+
+ :root{
+   --main-font: 'Yatra One';
+   --header-font: 
+ }
+ /* =============== */
+ /*     MAIN       */
+ /* =============== */
+ body{
+   font-family: var(--main-font);
+   background: whitesmoke;
+ }
+.main-container{
+  display: flex;
+}
+/* =============== */
+/*     ASIDE       */
+/* =============== */
+aside{
+  width: 300px;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  background: #040402;
+  color: #9A9F98;
+  text-shadow: 2px 2px 2px red;
+}
+aside h1{
+
+}
