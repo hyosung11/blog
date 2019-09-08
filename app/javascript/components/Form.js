@@ -62,17 +62,16 @@ class Form extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          name
+          name:
           <input type="text" placeholder="your name" id="name"
             value={this.state.name} onChange={this.handleChange}/>
         </label>
         <label>
-          image
+          image:
           <input type="text" placeholder="your image" id="image"
             value={this.state.image} onChange={this.handleChange}/>
         </label>
         <label>
-          post
           <textarea placeholder="share your inspiration" id="body"
             value={this.state.body} onChange={this.handleChange}></textarea>
         </label>
