@@ -115,7 +115,6 @@ main > h1 {
   font-family: var(--header-font);
   font-size: 2em;
   color: var(--grey-purple);
-  border-bottom: 3px solid var(--light-green);
   width: 85%;
   margin: 27px auto;
   text-transform: uppercase;
@@ -146,7 +145,7 @@ article {
 
 .post-options ul {
   list-style-type: none;
-  padding: 12px 0px;
+  padding: 20px 0px;
   font-family: var(--button-font);
   font-weight: bold;
   text-transform: uppercase;
