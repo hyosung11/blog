@@ -39,10 +39,10 @@
 /*     ASIDE       */
 /* =============== */
 aside{
-  width: 300px;
+  width: 500px;
   padding: 0px 20px;
   box-sizing: border-box;
-  background: #040402;
+  background: black;
   color: #9A9F98;
   text-shadow: 2px 2px 2px black;
   text-transform: uppercase;
@@ -89,7 +89,6 @@ article{
   font-weight: bold;
   text-transform: uppercase;
   border-bottom: 1px solid white;
-
 }
 .post-options li{
   display: inline-block;
@@ -102,4 +101,41 @@ article{
   text-shadow: 2px 2px 2px black;
   margin: 20px 10px;
   border: 5px;
+}
+/* =============== */
+/*     FORM        */
+/* =============== */
+form{
+  padding: 20px;
+  text-align: center;
+}
+label{
+  dislay: inline-block;
+  width: 50%;
+  margin: 12px;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  color: white;
+  text-shadow: 2px 2px 2px #87343F;
+  text-decoration: underline;
+}
+textarea{
+  width: 100%;
+  resize: none;
+  display: block;
+  border: 1px solid #87343F;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 10px;
+}
+input[type="submit"]{
+  display: block;
+  background: #87343F;
+  color: #9A9F98;
+  text-shadow: 2px 2px 2px black;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
 }
