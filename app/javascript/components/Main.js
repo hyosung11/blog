@@ -78,6 +78,7 @@ class Main extends React.Component {
 
   // Delete a post
   handleDelete = (id) => {
+    alert('Please confirm delete')
     fetch(`/api/posts/${id}`, {
       method: 'DELETE',
       headers: {
