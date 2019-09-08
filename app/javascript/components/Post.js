@@ -11,7 +11,7 @@ class Post extends React.Component {
       <article>
         <div className="post-header">
           <img src={this.props.postData.image} alt="image" />
-          <h1>{this.props.postData.name} lorem ipsum ...</h1>
+          <h1>{this.props.postData.name}</h1>
         </div>
         <div className="post-body">
           {this.props.postData.body}

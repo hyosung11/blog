@@ -16,7 +16,7 @@ class App extends React.Component {
     this.state = {
       view: {
         page: 'home',
-        pageTitle: 'lorem ipsum ...'
+        pageTitle: ''
       },
       formInputs: {
         name: null,
@@ -40,13 +40,13 @@ class App extends React.Component {
     // decide the pageTitle based on the view
     switch (view) {
       case 'home':
-        pageTitle = 'Just Do It'
+        pageTitle = ''
         break
       case 'addPost':
-        pageTitle = 'lorem ipsum'
+        pageTitle = ''
         break
       case 'editPost':
-        pageTitle = 'lorem ipsum'
+        pageTitle = ''
         formInputs = {
           name: postData.name,
           image: postData.image,
