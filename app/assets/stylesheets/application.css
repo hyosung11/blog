@@ -90,10 +90,10 @@ header {
   margin: 0 auto;
   padding: 20px;
   /* background-color: #eee; */
-  /* background-image: url(https://imgur.com/rZ8LM7C.png); */
+  background-image: url(https://cdn.pixabay.com/photo/2017/01/09/11/30/dumbbell-1966247_1280.jpg);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: right;
+  /* background-position: right; */
   display: flex;
   flex-direction: column;
   justify-content: center;
