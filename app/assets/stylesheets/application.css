@@ -13,32 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
  /* =============== */
  /*     FONTS       */
  /* =============== */
  @import url("https://fonts.googleapis.com/css?family=Yatra+One|Stint+Ultra+expanded|Strait|&display=swap");
 
-
- :root{
+ /* ================= */
+ /*     VARIABLES     */
+ /* ================= */
+:root {
    --main-font: 'Yatra One';
    --header-font: 'Stint Ultra Expanded';
    --button-font: 'Strait';
  }
+
  /* =============== */
  /*     MAIN       */
  /* =============== */
- body{
+ body {
    font-family: var(--main-font);
    background: black;
    color: white;
+   font-size: 20px;
  }
+
 .main-container{
   display: flex;
 }
+
 /* =============== */
 /*     ASIDE       */
 /* =============== */
-aside{
+aside {
   width: 500px;
   padding: 0px 20px;
   box-sizing: border-box;
@@ -46,15 +53,19 @@ aside{
   color: #9A9F98;
   text-shadow: 2px 2px 2px black;
   text-transform: uppercase;
+  text-align: center;
 }
-aside h1{
+
+aside h1 {
   font-family: var(--header-font);
 }
-aside ul{
+
+aside ul {
   list-style-type: none;
   padding: 0;
 }
-aside li{
+
+aside li {
   display: inline-block;
   width: 100%;
   padding: 10px;
@@ -64,25 +75,68 @@ aside li{
   margin-bottom: 5px;
   border-radius: 5px;
 }
+
+aside li:hover {
+  background: gold;
+  cursor: pointer;
+}
+
 /* =============== */
 /*     HEADER      */
 /* =============== */
-header h1{
-  text-align: center;
+header {
+  min-width: 750px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: #eee; */
+  /* background-image: url(https://imgur.com/rZ8LM7C.png); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 2px solid white;
 }
+
+header h1 {
+  text-align: center;
+  font-size: 4em;
+}
+
+/* ================= */
+/*       MAIN        */
+/* ================= */
+/* main {
+  width: calc(100% - 300px);
+} */
+main > h1 {
+  font-family: var(--header-font);
+  font-size: 2em;
+  color: var(--grey-purple);
+  border-bottom: 3px solid var(--light-green);
+  width: 85%;
+  margin: 27px auto;
+  text-transform: uppercase;
+}
+
 /* =============== */
 /*     POSTS       */
 /* =============== */
-article{
+article {
   text-align: center;
+  padding: 10px;
 }
-.post-header img{
-  width: 250px;
-  height: 150px;
+
+.post-header img {
+  width: 500px;
+  height: 300px;
   padding: 2px;
   border:  1px solid #ddd;
 }
-.post-options ul{
+
+.post-options ul {
   list-style-type: none;
   padding: 12px 0px;
   font-family: var(--button-font);
@@ -90,11 +144,12 @@ article{
   text-transform: uppercase;
   border-bottom: 1px solid white;
 }
-.post-options li{
+
+.post-options li {
   display: inline-block;
   text-align: center;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   background: #87343F;
   color: #9A9F98;
@@ -102,14 +157,21 @@ article{
   margin: 20px 10px;
   border: 5px;
 }
+
+.post-options li:hover {
+  background: gold;
+  cursor: pointer;
+}
+
 /* =============== */
 /*     FORM        */
 /* =============== */
-form{
+form {
   padding: 20px;
   text-align: center;
 }
-label{
+
+label {
   dislay: inline-block;
   width: 50%;
   margin: 12px;
@@ -120,8 +182,9 @@ label{
   text-shadow: 2px 2px 2px #87343F;
   text-decoration: underline;
 }
-textarea{
-  width: 100%;
+
+textarea {
+  width: 95%;
   resize: none;
   display: block;
   border: 1px solid #87343F;
@@ -129,7 +192,8 @@ textarea{
   padding: 15px;
   margin-top: 10px;
 }
-input[type="submit"]{
+
+input[type="submit"] {
   display: block;
   background: #87343F;
   color: #9A9F98;
@@ -138,4 +202,12 @@ input[type="submit"]{
   box-sizing: border-box;
   width: 100%;
   padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: var(--main-font);
+}
+
+input:hover {
+  background: gold;
+  cursor: pointer;
 }
