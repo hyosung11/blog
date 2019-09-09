@@ -77,7 +77,7 @@ class Main extends React.Component {
   }
 
   // Delete a post
-  handleDelete = (id) => {
+  handleDelete = (id) => {  
     fetch(`/api/posts/${id}`, {
       method: 'DELETE',
       headers: {

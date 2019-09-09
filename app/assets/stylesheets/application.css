@@ -13,48 +13,59 @@
  *= require_tree .
  *= require_self
  */
+
  /* =============== */
  /*     FONTS       */
  /* =============== */
  @import url("https://fonts.googleapis.com/css?family=Yatra+One|Stint+Ultra+expanded|Strait|&display=swap");
 
-
- :root{
+ /* ================= */
+ /*     VARIABLES     */
+ /* ================= */
+:root {
    --main-font: 'Yatra One';
    --header-font: 'Stint Ultra Expanded';
    --button-font: 'Strait';
  }
+
  /* =============== */
  /*     MAIN       */
  /* =============== */
- body{
+ body {
    font-family: var(--main-font);
    background: black;
    color: white;
+   font-size: 20px;
  }
+
 .main-container{
   display: flex;
 }
+
 /* =============== */
 /*     ASIDE       */
 /* =============== */
-aside{
-  width: 350px;
+aside {
+  width: 500px;
   padding: 0px 20px;
   box-sizing: border-box;
   background: black;
   color: #9A9F98;
   text-shadow: 2px 2px 2px black;
   text-transform: uppercase;
+  text-align: center;
 }
-aside h1{
+
+aside h1 {
   font-family: var(--header-font);
 }
-aside ul{
+
+aside ul {
   list-style-type: none;
   padding: 0;
 }
-aside li{
+
+aside li {
   display: inline-block;
   width: 100%;
   padding: 10px;
@@ -64,37 +75,87 @@ aside li{
   margin-bottom: 5px;
   border-radius: 5px;
 }
+
+aside li:hover {
+  background: gold;
+  cursor: pointer;
+}
+
 /* =============== */
 /*     HEADER      */
 /* =============== */
-header h1{
-  text-align: center;
+header {
+  min-width: 750px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url(https://cdn.pixabay.com/photo/2017/01/09/11/30/dumbbell-1966247_1280.jpg);
+  background-size: 950px 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 2px solid white;
 }
+
+header h1 {
+  text-align: center;
+  font-size: 4em;
+}
+
+/* ================= */
+/*       MAIN        */
+/* ================= */
+/* main {
+  width: calc(100% - 300px);
+} */
+main > h1 {
+  font-family: var(--header-font);
+  font-size: 2em;
+  color: var(--grey-purple);
+  width: 85%;
+  margin: 27px auto;
+  text-transform: uppercase;
+}
+
 /* =============== */
 /*     POSTS       */
 /* =============== */
-article{
+article {
   text-align: center;
+  padding: 40px;
 }
-.post-header img{
-  width: 250px;
-  height: 150px;
+
+.post-header img {
+  width: 500px;
+  height: 300px;
   padding: 2px;
   border:  1px solid #ddd;
 }
-.post-options ul{
+
+.post-body {
+  margin: 10px 100px;
+  padding: 3px 40px;
+  text-align: left;
+  box-sizing: border-box;
+
+}
+
+.post-options ul {
   list-style-type: none;
-  padding: 12px 0px;
+  padding: 20px 0px;
   font-family: var(--button-font);
   font-weight: bold;
   text-transform: uppercase;
   border-bottom: 1px solid white;
 }
-.post-options li{
+
+.post-options li {
   display: inline-block;
   text-align: center;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   background: #87343F;
   color: #9A9F98;
@@ -102,14 +163,21 @@ article{
   margin: 20px 10px;
   border: 5px;
 }
+
+.post-options li:hover {
+  background: gold;
+  cursor: pointer;
+}
+
 /* =============== */
 /*     FORM        */
 /* =============== */
-form{
+form {
   padding: 20px;
   text-align: center;
 }
-label{
+
+label {
   dislay: inline-block;
   width: 50%;
   margin: 12px;
@@ -118,18 +186,39 @@ label{
   font-family: var(--main-font);
   color: white;
   text-shadow: 2px 2px 2px #87343F;
-  text-decoration: underline;
+  text-decoration: none;
+  padding: 10px 0;
+  border-top: 5px;
+  /* margin-bottom: 5px; */
 }
-textarea{
+
+textarea {
   width: 100%;
   resize: none;
   display: block;
   border: 1px solid #87343F;
   border-radius: 5px;
-  padding: 15px;
+  padding: 15px 10px;
   margin-top: 10px;
+  font-size: 16px;
 }
-input[type="submit"]{
+
+textarea:hover {
+  background: gold;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  display: inline-block;
+  padding: 15px 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
   display: block;
   background: #87343F;
   color: #9A9F98;
@@ -137,5 +226,14 @@ input[type="submit"]{
   text-transform: uppercase;
   box-sizing: border-box;
   width: 100%;
-  padding: 15px;
+  padding: 15px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: var(--main-font);
+  margin: 10px;
+}
+
+input:hover {
+  background: gold;
+  cursor: pointer;
 }
